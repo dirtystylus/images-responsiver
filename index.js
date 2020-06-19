@@ -13,7 +13,7 @@ const info = debug('images-responsiver:info');
 const defaultSettings = {
   selector: ':not(picture) img[src]:not([srcset]):not([src$=".svg"])',
   resizedImageUrl: (src, width) =>
-    src.replace(/^.*\.[^\.]+$/, '$1' + '?nf_resize=fit&w=' + width),
+    src.replace(/^(.*\.[^\.]+)$/, '$1' + '?nf_resize=fit&w=' + width),
   runBefore: (image) => image,
   runAfter: (image) => image,
   fallbackWidth: 640,
